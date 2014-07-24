@@ -9,7 +9,10 @@ server.pack.register({
 		appPath: '/{p*}',
 		moonboots: {
 			main: __dirname + '/client/app.js',
-			developmentMode: false
+			developmentMode: true,
+			stylesheets: [
+				__dirname + '/public/css/bootstrap.css'
+			]
 		}
 	}
 }, function() {
