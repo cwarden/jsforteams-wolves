@@ -9,6 +9,7 @@
   "author": "Christian G. Warden <cwarden@xerus.org>",
   "license": "ISC",
   "dependencies": {
-    "hapi": "^6.2.1"
+    "hapi": "^6.2.1",
+    "moonboots_hapi": "^2.4.0"
   }
 }
