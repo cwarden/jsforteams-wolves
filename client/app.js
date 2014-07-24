@@ -12,6 +12,9 @@ var app = {
 
 		app.howls = new Howls();
 		app.howls.fetch();
+		setInterval(function() {
+			app.howls.fetch();
+		}, 5000);
 
 		app.router = new Router();
 
