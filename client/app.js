@@ -1,7 +1,16 @@
-window.app = {
+var domready = require('domready');
+
+var MainView = require('./views/main');
+
+var app = {
 	init: function() {
-		console.log('hello world!');
+		domready(function() {
+			app.view = new MainView({
+				el: document.body
+			});
+		});
 	}
 };
 
-window.app.init();
+window.app = app;
+app.init();
