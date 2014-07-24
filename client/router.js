@@ -1,4 +1,6 @@
 var Router = require('ampersand-router');
+var HomePage = require('./pages/home');
+var HowlsPage = require('./pages/howls');
 
 module.exports = Router.extend({
 	routes: {
@@ -7,11 +9,11 @@ module.exports = Router.extend({
 	},
 
 	home: function() {
-		console.log('you are home');
+		this.trigger('page', new HomePage());
 	},
 
 	howls: function() {
-		console.log('you are reading howls');
+		this.trigger('page', new HowlsPage());
 	}
 
 });
