@@ -17,6 +17,7 @@
     "ampersand-view": "^6.0.8",
     "domready": "^1.0.5",
     "ampersand-view-switcher": "^1.0.2",
-    "templatizer": "^0.3.6"
+    "templatizer": "^0.3.6",
+    "ampersand-dom": "^1.2.1"
   }
 }
