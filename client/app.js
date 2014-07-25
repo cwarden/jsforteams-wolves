@@ -10,10 +10,7 @@ var app = {
 		app.me = new Me();
 
 		app.howls = new Howls();
-		app.howls.fetch();
-		setInterval(function() {
-			app.howls.fetch();
-		}, 5000);
+		app.howls.fetchRealtime();
 
 		app.router = new Router();
 
