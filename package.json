@@ -22,5 +22,9 @@
     "ampersand-rest-collection": "^1.1.1",
     "moment": "^2.7.0",
     "xn-howler": "^1.1.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.5.2",
+    "precommit-hook": "^1.0.5"
   }
 }

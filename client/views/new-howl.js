@@ -21,7 +21,7 @@ module.exports = View.extend({
 				self.get('[name=content]').value = '';
 			},
 			error: function() {
-				alert('FAILED!');
+				window.alert('FAILED!');
 			}
 		});
 	}

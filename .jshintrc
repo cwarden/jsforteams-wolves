@@ -1,0 +1,14 @@
+{
+  "node": true,
+
+  "browser": true,
+  "curly": true,
+  "latedef": true,
+  "quotmark": true,
+  "undef": true,
+  "unused": true,
+  "trailing": true,
+  "globals": {
+	  "app": false
+  }
+}

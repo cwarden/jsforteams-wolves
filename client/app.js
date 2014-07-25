@@ -7,27 +7,27 @@ var Me = require('./models/me');
 
 var howler = require('xn-howler');
 
-var app = {
+var App = {
 	init: function() {
-		app.me = new Me();
+		App.me = new Me();
 		howler.play();
 
-		app.howls = new Howls();
-		app.howls.fetchRealtime();
+		App.howls = new Howls();
+		App.howls.fetchRealtime();
 
-		app.router = new Router();
+		App.router = new Router();
 
 		domready(function() {
-			app.view = new MainView({
+			App.view = new MainView({
 				el: document.body
 			});
-			app.router.history.start({
+			App.router.history.start({
 				pushState: true
 			});
-			app.me.fetch();
+			App.me.fetch();
 		});
 	}
 };
 
-window.app = app;
-app.init();
+window.app = App;
+App.init();

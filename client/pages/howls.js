@@ -11,7 +11,7 @@ module.exports = View.extend({
 	subviews: {
 		newHowl: {
 			constructor: NewHowlView,
-			role: 'new-howl',
+			role: 'new-howl'
 		}
 	},
 	render: function() {
