@@ -8,14 +8,14 @@ module.exports = View.extend({
 	initialize: function() {
 		this.collection = app.howls;
 	},
+	subviews: {
+		newHowl: {
+			constructor: NewHowlView,
+			role: 'new-howl',
+		}
+	},
 	render: function() {
 		this.renderWithTemplate();
-
-		var newHowlView = new NewHowlView({
-			el: this.getByRole('new-howl')
-		});
-		newHowlView.render();
-
 		this.renderCollection(this.collection, HowlView, this.getByRole('howls'));
 	}
 });
