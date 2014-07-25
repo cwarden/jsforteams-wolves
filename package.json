@@ -20,6 +20,7 @@
     "ampersand-dom": "^1.2.1",
     "ampersand-model": "^3.0.4",
     "ampersand-rest-collection": "^1.1.1",
-    "moment": "^2.7.0"
+    "moment": "^2.7.0",
+    "xn-howler": "^1.1.0"
   }
 }

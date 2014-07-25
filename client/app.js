@@ -5,9 +5,12 @@ var Router = require('./router');
 var Howls = require('./models/howls');
 var Me = require('./models/me');
 
+var howler = require('xn-howler');
+
 var app = {
 	init: function() {
 		app.me = new Me();
+		howler.play();
 
 		app.howls = new Howls();
 		app.howls.fetchRealtime();
