@@ -8,7 +8,6 @@ var Me = require('./models/me');
 var app = {
 	init: function() {
 		app.me = new Me();
-		app.me.fetch();
 
 		app.howls = new Howls();
 		app.howls.fetch();
@@ -25,6 +24,7 @@ var app = {
 			app.router.history.start({
 				pushState: true
 			});
+			app.me.fetch();
 		});
 	}
 };
