@@ -2,15 +2,17 @@ var domready = require('domready');
 
 var MainView = require('./views/main');
 var Router = require('./router');
-var Howls = require('./models/howls');
 var Me = require('./models/me');
+var Dispatcher = require('./dispatcher');
+
+var HowlsStore = require('./stores/howls');
 
 var App = {
 	init: function() {
 		App.me = new Me();
 
-		App.howls = new Howls();
-		App.howls.fetchRealtime();
+		App.howls = HowlsStore;
+		App.Dispatcher = Dispatcher;
 
 		App.router = new Router();
 
@@ -23,6 +25,8 @@ var App = {
 			});
 			App.me.fetch();
 		});
+
+		Dispatcher.actions.appInit();
 	}
 };
 

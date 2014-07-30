@@ -20,7 +20,9 @@
     "ampersand-dom": "^1.2.1",
     "ampersand-model": "^3.0.4",
     "ampersand-rest-collection": "^1.1.1",
-    "moment": "^2.7.0"
+    "moment": "^2.7.0",
+    "backbone-events-standalone": "^0.2.2",
+    "underscore": "^1.6.0"
   },
   "devDependencies": {
     "jshint": "^2.5.2",

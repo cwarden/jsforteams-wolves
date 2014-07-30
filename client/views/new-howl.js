@@ -1,6 +1,8 @@
 var View = require('ampersand-view');
 var templates = require('../../build/templates');
 
+var Dispatcher = require('../dispatcher');
+
 module.exports = View.extend({
 	template: templates.includes.newHowl,
 	autoRender: true,
@@ -9,21 +11,20 @@ module.exports = View.extend({
 		'submit [role=new-howl]': 'createNewHowl'
 	},
 
+	initialize: function() {
+		Dispatcher.actions.on('newHowlCreated', this.reset, this);
+	},
+
 	createNewHowl: function(event) {
 		event.preventDefault();
-		var self = this;
-		app.howls.create({
+		Dispatcher.actions.newHowl({
 			content: this.get('[name=content]').value,
 			createdAt: new Date()
-		}, {
-			wait: true,
-			success: function() {
-				self.get('[name=content]').value = '';
-			},
-			error: function() {
-				window.alert('FAILED!');
-			}
 		});
+	},
+
+	reset: function() {
+		this.get('[name=content]').value = '';
 	}
 
 });
